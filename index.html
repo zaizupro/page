@@ -1,1 +1,39 @@
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>index</title>
+<meta charset="utf-8">
+</head>
+<body>
+    <div id="parent">
+        <p>[ <a href="https://www.youtube.com/">###</a> ]</p>
+
+        <p><input id="search_input"><input type=submit value="go" onclick="opendat()" ></p>
+        <p><input id="search_lastfm_input"><input type=submit value="go" onclick="opendat_lastfm()" ></p>
+        <p><input id="user_lastfm_input"><input type=submit value="go" onclick="opendat_lastfm_history()" ></p>
+    </div>
+    <script>
+        document.getElementById('search_input').onkeypress = function(e){
+            if (!e) e = window.event;
+            if (e.keyCode == '13'){
+                opendat();
+                return false;
+            }
+          }
+        document.getElementById('search_lastfm_input').onkeypress = function(e){
+            if (!e) e = window.event;
+            if (e.keyCode == '13'){
+                opendat_lastfm();
+                return false;
+            }
+          }
+        document.getElementById('user_lastfm_input').onkeypress = function(e){
+            if (!e) e = window.event;
+            if (e.keyCode == '13'){
+                opendat_lastfm_history();
+                return false;
+            }
+          }
+    </script>
+</body>
+</html>

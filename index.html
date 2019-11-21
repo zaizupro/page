@@ -3,7 +3,24 @@
 <head>
 <title>index</title>
 <meta charset="utf-8">
+    <script>
+        function opendat() {
+            var search_input = document.getElementById("search_input").value;
+            window.open('https://www.youtube.com/results?search_query='+search_input);
+        }
+
+        function opendat_lastfm() {
+            var search_lastfm_input = document.getElementById("search_lastfm_input").value;
+            window.open('https://www.last.fm/search?q='+search_lastfm_input);
+        }
+        function opendat_lastfm_history() {
+            var user = document.getElementById("user_lastfm_input").value;
+            var search_lastfm_input = document.getElementById("search_lastfm_input").value;
+            window.open('https://www.last.fm/user/'+user+'/library/music/'+search_lastfm_input);
+        }
+    </script>
 </head>
+
 <body>
     <div id="parent">
         <p>[ <a href="https://www.youtube.com/">###</a> ]</p>

@@ -3,6 +3,84 @@
 <head>
 <title>index</title>
 <meta charset="utf-8">
+    <style>
+        html, body
+        {
+            background-color: #101010;
+        }
+        #parent
+        {
+            text-align:center;
+            font-family: Anonymous Pro, "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        A,p
+        {
+            outline: none;
+            color: #40EEFF;
+            text-decoration: none;
+            padding: 0;
+            margin: 10px;
+            text-shadow: 0 0 5px #00EEFF, 0 0 5px #00EEFF;
+        }
+
+        A:hover,p:hover
+        {
+            color: #40EEFF;
+            text-decoration: none;
+            text-shadow: 0 0 3px #00EEFF, 0 0 3px #00EEFF;
+        }
+
+        input
+        {
+            border: 2px solid #FF80FF;
+            background: #201030 !important;
+            border-radius: 4px 0px 0px 4px;
+            color: #10eEeF;
+            font-family: Anonymous Pro, "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            font-weight: bold;
+            box-sizing: border-box;
+            outline: none;
+            height: 30px;
+            width: 220px;
+            text-decoration: none;
+            text-shadow: 0 0 5px #50FEFF, 0 0 3px #50FEFF;
+            display: inline-block;
+            margin: 0px;
+            box-shadow: 0 0px 4px #FF80FF, 0 0px 8px #FF80FF;
+        }
+
+        input[type="submit"]
+        {
+            width: 50px;
+            background: #FF80FF !important;
+            color: #101010 !important;
+            text-shadow: 0 0 1px #000000, 0 0 1px #000000;
+            border-radius: 0px 4px 4px 0px;
+        }
+
+        input:hover, input:focus
+        {
+            text-shadow: 0 0 4px #00EEFF, 0 0 2px #00EEFF;
+            box-shadow: 0 0px 8px #aa80ff, 0 0px 8px #aa40FF;
+        }
+
+        input[type="submit"]:hover, input[type="submit"]:focus
+        {
+            border: 2px solid #FF80FF;
+            color: #FF40EE;
+            text-decoration: none;
+            text-shadow: 0 0 4px #aa00ff, 0 0 1px #000;
+        }
+
+        input::-moz-focus-inner
+        {
+            border: 0;
+        }
+
+
+    </style>
     <script>
         function opendat() {
             var search_input = document.getElementById("search_input").value;

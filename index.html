@@ -5,133 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="css.css" rel="stylesheet">
-    <style>
-        html, body
-        {
-            background-color: #101010;
-        }
-        #parent
-        {
-            text-align:center;
-            font-family: Anonymous Pro, "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        A,p
-        {
-            outline: none;
-            color: #40EEFF;
-            text-decoration: none;
-            padding: 0;
-            margin: 10px;
-            text-shadow: 0 0 5px #00EEFF, 0 0 5px #00EEFF;
-        }
-
-        A:hover,p:hover
-        {
-            color: #40EEFF;
-            text-decoration: none;
-            text-shadow: 0 0 3px #00EEFF, 0 0 3px #00EEFF;
-        }
-
-        input
-        {
-            border: 2px solid #FF80FF;
-            background: #201030 !important;
-            border-radius: 4px 0px 0px 4px;
-            color: #10eEeF;
-            font-family: Anonymous Pro, "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-            font-weight: bold;
-            box-sizing: border-box;
-            outline: none;
-            height: 30px;
-            width: 220px;
-            text-decoration: none;
-            text-shadow: 0 0 5px #50FEFF, 0 0 3px #50FEFF;
-            display: inline-block;
-            margin: 0px;
-            box-shadow: 0 0px 4px #FF80FF, 0 0px 8px #FF80FF;
-        }
-
-        input[type="submit"]
-        {
-            width: 50px;
-            background: #FF80FF !important;
-            color: #101010 !important;
-            text-shadow: 0 0 1px #000000, 0 0 1px #000000;
-            border-radius: 0px 4px 4px 0px;
-        }
-
-        input:hover, input:focus
-        {
-            text-shadow: 0 0 4px #00EEFF, 0 0 2px #00EEFF;
-            box-shadow: 0 0px 8px #aa80ff, 0 0px 8px #aa40FF;
-        }
-
-        input[type="submit"]:hover, input[type="submit"]:focus
-        {
-            border: 2px solid #FF80FF;
-            color: #FF40EE;
-            text-decoration: none;
-            text-shadow: 0 0 4px #aa00ff, 0 0 1px #000;
-        }
-
-        input::-moz-focus-inner
-        {
-            border: 0;
-        }
-
-
-    </style>
-    <script>
-        function opendat() {
-            var search_input = document.getElementById("search_input").value;
-            window.open('https://www.youtube.com/results?search_query='+search_input);
-        }
-
-        function opendat_lastfm() {
-            var search_lastfm_input = document.getElementById("search_lastfm_input").value;
-            window.open('https://www.last.fm/search?q='+search_lastfm_input);
-        }
-        function opendat_lastfm_history() {
-            var user = document.getElementById("user_lastfm_input").value;
-            var search_lastfm_input = document.getElementById("search_lastfm_input").value;
-            window.open('https://www.last.fm/user/'+user+'/library/music/'+search_lastfm_input);
-        }
-    </script>
 </head>
 
 <body>
     <div id="parent">
         <p>[ <a href="https://www.youtube.com/">###</a> ]</p>
 
-        <p><input id="search_input"><input type=submit value="go" onclick="opendat()" ></p>
-        <p><input id="search_lastfm_input"><input type=submit value="go" onclick="opendat_lastfm()" ></p>
-        <p><input id="user_lastfm_input"><input type=submit value="go" onclick="opendat_lastfm_history()" ></p>
+        <p><input id="search_input"><input type=submit value="->" onclick="opendat()" ></p>
+        <p>
+            <input id="search_musicbrainz_input"><input type=submit value="->" onclick="opendat_musicbrainz_search()" >
+        </p>
+        <p>
+            <input id="search_lastfm_input"><input type=submit value="->" onclick="opendat_lastfm()" >
+        </p>
+        <p><input id="user_lastfm_input"><input type=submit value="->" onclick="opendat_lastfm_history()" ></p>
     </div>
-    <script>
-        document.getElementById('search_input').onkeypress = function(e){
-            if (!e) e = window.event;
-            if (e.keyCode == '13'){
-                opendat();
-                return false;
-            }
-          }
-        document.getElementById('search_lastfm_input').onkeypress = function(e){
-            if (!e) e = window.event;
-            if (e.keyCode == '13'){
-                opendat_lastfm();
-                return false;
-            }
-          }
-        document.getElementById('user_lastfm_input').onkeypress = function(e){
-            if (!e) e = window.event;
-            if (e.keyCode == '13'){
-                opendat_lastfm_history();
-                return false;
-            }
-          }
-    </script>
 </body>
 <script src="js.js"></script>
 </html>

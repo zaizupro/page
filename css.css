@@ -1,0 +1,94 @@
+:root
+{
+  --base00: #201030;
+  --base01: #aa00ff;
+  --base01: #00aaff;
+  --base02: #ee00ff;
+  --base_02: #00EEFF;
+  --base_03: #40EEFF;
+  --base04: #aa40FF;
+  --base05: #aa80ff;
+  --base_06: #50FEFF;
+  --base06: #FF80FF;
+}
+
+html, body
+{
+/*    filter: hue-rotate(45deg); */
+    background-color: var(--base00);
+}
+
+#parent
+{
+    text-align:center;
+    font-family: Anonymous Pro, "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+A,p
+{
+    outline: none;
+    color: var(--base_03);
+    text-decoration: none;
+    padding: 0;
+    margin: 10px;
+    text-shadow: 0 0 5px var(--base_02), 0 0 5px var(--base_02);
+}
+
+A:hover,p:hover
+{
+    color: var(--base_03);
+    text-decoration: none;
+    text-shadow: 0 0 3px var(--base_02), 0 0 3px var(--base_02);
+}
+
+input
+{
+    border: 2px solid var(--base06);
+    background: var(--base00) !important;
+    border-radius: 4px 0px 0px 4px;
+    color: var(--base_02);
+    font-family: Anonymous Pro, "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    outline: none;
+    height: 30px;
+    width: 220px;
+    text-decoration: none;
+    text-shadow: 0 0 5px var(--base_06), 0 0 3px var(--base_06);
+    display: inline-block;
+    margin: 0px;
+    box-shadow: inset 0 0px 15px var(--base06), 0 0px 15px var(--base06);  /*<---   same */
+}
+
+input[type="submit"]
+{
+    width: 50px;
+    background: var(--base06) !important;
+    color: var(--base00) !important;
+    text-shadow: 0 0 1px var(--base00), 0 0 1px var(--base00);
+    border-radius: 0px 4px 4px 0px;
+}
+
+input:hover, input:focus
+{
+    text-shadow: 0 0 4px var(--base_02), 0 0 2px var(--base_02);
+    box-shadow: inset 0 0px 25px var(--base05), 0 0px 15px var(--base06) ;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus
+{
+    border: 2px solid var(--base06);
+    text-decoration: none;
+    color: var(--base_03) !important;
+    text-shadow: 0 0 14px var(--base_03), 0 0 5px #000 !important;
+    /*TODO box-shadow must be like in 'input' */
+    box-shadow: inset 0 0px 15px var(--base06), 0 0px 15px var(--base06);  /*<---   same */
+}
+
+input::-moz-focus-inner
+{
+    border: 0;
+}
+

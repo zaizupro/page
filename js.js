@@ -1,3 +1,10 @@
+window.addEventListener('click', function (evt) {
+    if (evt.detail === 3) {
+//        alert('triple click!');
+        window.location.href = 'https://github.com/zaizupro/zaizupro.github.io'
+    }
+});
+
 function opendat()
 {
     var search_input = document.getElementById("search_input").value;
